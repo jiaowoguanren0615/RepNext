@@ -8,7 +8,9 @@ from copy import copy
 from math import sqrt
 
 
-
+"""
+AdaFactor for training ViT-G model
+"""
 __all__ = ['SophiaG', 'AdaFactor']
 
 # optimizer = SophiaG(model.parameters(), lr=args.lr, betas=(0.965, 0.99), rho=0.01, weight_decay=1e-1)
