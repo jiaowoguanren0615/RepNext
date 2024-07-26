@@ -363,11 +363,6 @@ def main(args):
 
     optimizer = create_optimizer(args, model_without_ddp)
 
-    # TODO https://arxiv.org/pdf/2209.06794v4 (ViT-G, ViT-g, ViT-e) with "inverse_sqrt_lr_decay"
-    # optimizer = AdaFactor(model.parameters(), lr=0.0008, beta1=0.0, beta2=0.8) # For ViT-e
-    # lr_scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=inverse_sqrt_lr_decay)
-
-
     loss_scaler = NativeScaler()
     lr_scheduler, _ = create_scheduler(args, optimizer)
 
